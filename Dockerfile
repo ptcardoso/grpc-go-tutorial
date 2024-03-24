@@ -7,6 +7,6 @@ COPY . .
 
 RUN go build -o main main.go
 
-EXPOSE 50051
+EXPOSE 50051/tcp
 
 CMD ["./main"]

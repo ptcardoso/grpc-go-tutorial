@@ -40,7 +40,7 @@ func (s *server) Divide(ctx context.Context, in *pb.OperationRequest) (*pb.Opera
 
 func main() {
 	flag.Parse()
-	lis, err := net.Listen("tcp", fmt.Sprintf(":%d", *port))
+	lis, err := net.Listen("tcp", fmt.Sprintf("localhost:%d", *port))
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
 	}
